@@ -24,9 +24,6 @@ def data_call():
         download=True,
         transform=ToTensor()
     )
-
-    return train_data,test_data
-def data_loader(train_data,test_data):
     from torch.utils.data import DataLoader
 
     #Setup the batch size hyperparameter
@@ -35,7 +32,8 @@ def data_loader(train_data,test_data):
     #Turn Data Set into iterables(Batches)
     train_dataloader=DataLoader(train_data,batch_size=BATCH_SIZE,shuffle=True)
     test_dataloader=DataLoader(test_data,batch_size=BATCH_SIZE,shuffle=False)
-    return train_dataloader,test_dataloader
+
+    return train_data,test_data,train_dataloader,test_dataloader
 
 def accuracy_fn(y_true, y_pred):
     """Calculates accuracy between truth labels and predictions.
