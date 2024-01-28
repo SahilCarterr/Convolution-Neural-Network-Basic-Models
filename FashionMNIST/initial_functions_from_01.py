@@ -65,6 +65,6 @@ def print_train_time(start: float, end: float , device: torch.device=None):
     return total_time
 
 def results_model_0():
-    return{'model_name': 'FashionMNISTV0',
-    'model_loss': '0.4766390025615692',
-    'model_acc': '83.42651757188499'}
+    return{'model_name': 'FashionMNISTModelV0',
+    'model_loss': 0.4766390025615692,
+    'model_acc': 83.42651757188499}
